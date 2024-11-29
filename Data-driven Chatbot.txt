@@ -1,0 +1,87 @@
+Company Chatbot 
+
+This chatbot is here to help you quickly find information about companies listed in the Electronica Exhibitor Directory. Whether you're interested in industry details, company lists, or contact information, just ask, and the chatbot will get back to you with the answer.
+
+Key Features
+
+•	Count Queries: Want to know how many companies belong to a specific industry? Ask the chatbot!
+•	List Queries: Looking for a list of companies in a particular field or category? It can do that too.
+•	Contact Queries: Need contact details for companies in a certain location? Just ask away.
+
+
+What You Need to Get Started
+
+1.	Python 3.7+
+Make sure you're running Python version 3.7 or later.
+2.	Libraries
+You’ll need the following libraries:
+o	pandas (for data manipulation)
+o	spacy (for natural language processing)
+              To install them, simply run:
+              pip install pandas spacy
+3.	spaCy Model
+This chatbot uses the en_core_web_sm model for language understanding. Install it by running:
+4.	python -m spacy download en_core_web_sm
+5.	It is recommended to run it in Colab
+For a smooth experience, especially with file handling and dependencies, it’s recommended to run this code in Google Colab. You can upload your dataset to Colab, and it will handle the setup without requiring local environment configuration.
+
+
+
+The Dataset
+
+The chatbot relies on a CSV file named electronica_exhibitors_with_contacts.csv. This file should include the following columns:
+•	Company Name
+•	Address
+•	Description
+•	Website
+•	Email
+•	Contact Number
+Make sure the file is located at the path specified in the code (/content/electronica_exhibitors_with_contacts.csv). If you have a different location, you may need to adjust the file path in the script.
+
+Setting It Up
+
+1.	Clone or Download
+Get the code by either cloning the repository or downloading the files to your local machine.
+2.	Place Your Dataset
+Make sure the electronica_exhibitors_with_contacts.csv file is in the right place.
+3.	Install Dependencies
+Install the libraries listed above by running the provided pip install commands.
+4.	Run in Colab (Recommended)
+You can upload the dataset to Google Colab and execute the script directly. This environment simplifies the setup and ensures smooth execution. If you're running locally, make sure you have Python 3.7+ and the necessary libraries installed.
+
+Running the Chatbot
+
+1.	Open your terminal or command prompt.
+2.	Navigate to the directory where your chatbot code is located.
+3.	Run the chatbot by typing:
+4.	python chatbot.py
+5.	Start chatting! Type in your queries and get responses. If you want to exit, simply type exit.
+
+Example Queries
+
+Here are a few things you can ask the chatbot:
+•	Count Queries:
+"How many companies are in the semiconductor industry?"
+•	List Queries:
+"List companies manufacturing microcontrollers."
+•	Contact Queries:
+"Provide contact details for companies in Germany."
+
+Customizing the Chatbot
+
+You can make the chatbot fit your needs:
+1.	Update the Dataset
+You can replace or update the dataset to include new companies or different industries.
+2.	Synonym Expansion
+The chatbot uses a small list of industry synonyms for better matching. Feel free to expand the synonyms dictionary to cover more terms.
+3.	Contextual Follow-ups
+The chatbot remembers context between queries. If you’d like to tweak how the chatbot handles follow-up questions, you can modify this behaviour in the Chatbot class.
+
+Known Limitations
+
+While the chatbot is smart, it does have some limitations:
+•	Limited Synonyms: The list of synonyms for industries is currently small. You can add more to improve the chatbot’s matching abilities.
+•	Context Issues: Sometimes, the chatbot might not fully understand follow-up queries, especially if they are ambiguous.
+
+
+
